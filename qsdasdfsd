@@ -247,12 +247,7 @@ local PlayerConnection = PlayerUpdater:Connect(function()
 end)
 
 --Init Functions
-for i, v in pairs(getupvalues(getrenv()._G.modules.Player.GetPlayerModel)[1]) do
-  if not table.find(cache,v) then
-      table.insert(cache,v)
-      Esp:CreateEsp(v)
-  end
-end
+
 
 game:GetService("Workspace").ChildAdded:Connect(function(child)
   if child:FindFirstChild("HumanoidRootPart") then
