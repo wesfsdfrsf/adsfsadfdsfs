@@ -247,8 +247,6 @@ local PlayerConnection = PlayerUpdater:Connect(function()
 end)
 
 --Init Functions
-
-
 game:GetService("Workspace").ChildAdded:Connect(function(child)
   if child:FindFirstChild("HumanoidRootPart") then
       for i, v in pairs(getupvalues(getrenv()._G.modules.Player.GetPlayerModel)[1]) do
